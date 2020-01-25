@@ -9,7 +9,7 @@ module.exports = function (app) {
   const contact = new Schema({
     name: {
       first: {
-         type: String, required: [true, 'First Name is required']
+        type: String, required: [true, 'First Name is required']
       },
       last: {
         type: String, required: [true, 'Last Name is required']
@@ -21,7 +21,7 @@ module.exports = function (app) {
         validator: function(v) {
           return /^\+(?:[0-9] ?){6,14}[0-9]$/.test(v);
         },
-        message: `{VALUE} should be a valid international number`
+        message: '{VALUE} should be a valid international number'
       }
     },
     createdAt: { type: Date, 'default': Date.now },
